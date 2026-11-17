@@ -12,7 +12,7 @@ namespace DeliveryAPP1
 
         public override bool CanTake(Order order)
         {
-            return true;
+            return base.CanTake(order);
         }
 
         public override double CalculateCost(Order order)

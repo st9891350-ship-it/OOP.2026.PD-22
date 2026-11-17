@@ -28,7 +28,7 @@ namespace DeliveryAPP1//іменований простір - іменовани
 
 
             Console.WriteLine("---Друге замовлення--");
-            Order order2 = new Order(2, "Ecoflow", 20.0, 100.0);
+            Order order2 = new Order(2, "Ecoflow", 20.0, 49.0);
             IPaymentMethod cashmentMethod = new CashPayment();
             deliveryservice.CreateDelivery(order2, cashmentMethod);
 
@@ -41,6 +41,14 @@ namespace DeliveryAPP1//іменований простір - іменовани
             IPaymentMethod cachmentMethod = new CashPayment();
             deliveryservice.CreateDelivery(order3, cashmentMethod);
 
+
+            Console.WriteLine("--------------------------");
+
+
+            Console.WriteLine("---Третє замовлення--");
+            Order order4 = new Order(4, "Breakfast of syrnyky and tea ", 1.5, 8.7);
+            IPaymentMethod payhmentMethod = new CardPayment();
+            deliveryservice.CreateDelivery(order4, paymentMethod);
 
 
         }

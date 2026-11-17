@@ -12,7 +12,7 @@ namespace DeliveryAPP1
 
         public override bool CanTake(Order order)
         {
-            return order.Weight <= 100 && order.Distance <= 50;
+            return base.CanTake(order) &&  order.Weight <= 100 && order.Distance <= 50;
         }
 
         public override double CalculateCost(Order order)

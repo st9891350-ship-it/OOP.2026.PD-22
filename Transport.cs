@@ -13,12 +13,12 @@ namespace DeliveryAPP1
             Name = name;
 
         }
-        public virtual bool CanTake(Order order)
+        public virtual bool CanTake(Order order)//Метод для перевірки вільності транспорту
         {
-            return true;
+            return IsAvailable; 
         }
 
         public abstract double CalculateCost(Order order);
-
+      
     }
 }
